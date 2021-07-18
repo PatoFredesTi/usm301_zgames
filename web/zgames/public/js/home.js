@@ -14,3 +14,23 @@ const cargarMarcas = async()=>{
 };
 
 cargarMarcas();
+
+document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
+    let nombre = document.querySelector("#nombre-txt").value;
+    let marca = document.querySelector("#marca-select").value;
+    let anio = document.querySelector("#anio-txt").value;
+    let consola = {};
+    consola.nombre = nombre;
+    consola.marca = marca;
+    consola.anio = anio;
+    //TODO: Falta validar!!!
+    //1. Va al controlador, le pasa los datos
+    //2. El controlador crea el modelo
+    //3. El modelo ingresa en la base de datos
+    //4. Todos felices
+    let res = await crearConsola(consola);
+    //Mostrar un mensaje de exito con sweet alert
+    Swal.fire("Consola Creada", "Consola Creada Exitosamente","info");
+
+
+});
