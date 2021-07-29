@@ -19,7 +19,7 @@ class CrearTablaConsolas extends Migration
         //ORM: Crear clases pa que se cree sola la tabla
         Schema::create('consolas', function (Blueprint $table) {
             $table->id(); //Secuencias, autoincrementales
-            //Autoincrementales: Claves unicas generadas automaticamente por 
+            //Autoincrementales: Claves unicas generadas automaticamente por el motor
             $table->string("nombre",150);
             $table->string("marca",50);
             $table->integer("anio");

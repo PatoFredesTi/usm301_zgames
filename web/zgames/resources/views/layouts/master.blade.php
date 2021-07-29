@@ -42,6 +42,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{asset('js/axios_config.js')}}"></script>
     @yield("javascript") <!-- debe ir despues del axio config, con esto estoy configurando un yield para ejecutar js -->
-
+    
   </body>
 </html>

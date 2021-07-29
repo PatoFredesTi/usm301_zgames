@@ -17,3 +17,16 @@ const crearConsola = async (consola)=>{ //arrow functions
     }); 
     return resp.data;//Este data corresponde a la propiedad de axios que trae los datos, es decir las cosas que manda php vienen ahi
 };
+
+const eliminarConsola = async(id)=>{
+    try{
+        let resp = await axios.post("api/consolas/delete", {id},{
+            header:{
+                "Content-Type":"application/json"
+            }
+        });
+        return resp.data =="ok";
+    }catch (e){
+        return false;
+    }
+};
